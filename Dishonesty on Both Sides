@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dishonesty on Both Sides | Shoonya Foundation</title>
+  <style>
+    :root {
+      --bg: #f7f4ee;
+      --bg-soft: #ece6db;
+      --ink: #2f2a24;
+      --muted: #6c6459;
+      --line: rgba(47, 42, 36, 0.14);
+      --accent: #a08d72;
+      --accent-deep: #7b6a53;
+      --card: rgba(255, 255, 255, 0.45);
+      --shadow: 0 18px 40px rgba(70, 56, 38, 0.08);
+      --max: 860px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(180deg, #f2ede4 0%, #f7f4ee 18%, #f8f6f1 100%);
+      color: var(--ink);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .grain::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.06;
+      background-image:
+        radial-gradient(circle at 25% 20%, rgba(0,0,0,0.12) 0.5px, transparent 0.8px),
+        radial-gradient(circle at 70% 60%, rgba(0,0,0,0.1) 0.5px, transparent 0.8px),
+        radial-gradient(circle at 40% 80%, rgba(0,0,0,0.08) 0.5px, transparent 0.8px);
+      background-size: 22px 22px, 27px 27px, 31px 31px;
+      z-index: 0;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(14px);
+      background: rgba(247, 244, 238, 0.75);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .nav-link {
+      color: var(--accent-deep);
+      text-decoration: none;
+      font-size: 0.95rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.25s ease, opacity 0.25s ease;
+    }
+
+    .nav-link:hover { border-color: var(--accent-deep); }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 90px 24px 48px;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.78rem;
+      color: var(--accent-deep);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 7vw, 5.2rem);
+      font-weight: 400;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      margin: 20px auto 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.24rem);
+      line-height: 1.8;
+    }
+
+    .hero-divider {
+      width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      margin: 34px auto 0;
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .article-wrap {
+      max-width: var(--max);
+      margin: 0 auto 90px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.38);
+      box-shadow: var(--shadow);
+      border-radius: 32px;
+      overflow: hidden;
+    }
+
+    .article-intro {
+      padding: 34px 34px 18px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.18));
+    }
+
+    .article-intro p {
+      margin: 0;
+      font-size: 1.06rem;
+      color: var(--muted);
+    }
+
+    article {
+      padding: 18px 34px 40px;
+    }
+
+    p {
+      margin: 0 0 1.35em;
+      font-size: 1.12rem;
+    }
+
+    .lead {
+      font-size: 1.3rem;
+      color: var(--ink);
+    }
+
+    .spaced {
+      text-align: center;
+      font-size: 1.18rem;
+      line-height: 2.02;
+      margin: 2.2em 0;
+      color: var(--ink);
+    }
+
+    .question {
+      margin: 2.3em 0 1.6em;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(160, 141, 114, 0.08);
+      text-align: center;
+    }
+
+    .question p {
+      margin: 0;
+      font-size: clamp(1.35rem, 2.4vw, 1.95rem);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 400;
+      margin: 2.2em 0 0.8em;
+      color: var(--accent-deep);
+    }
+
+    blockquote {
+      margin: 2.2em 0;
+      padding: 10px 0 10px 24px;
+      border-left: 2px solid var(--accent);
+      color: var(--accent-deep);
+      font-size: 1.18rem;
+      line-height: 1.9;
+    }
+
+    .closing {
+      margin-top: 2.6em;
+      padding-top: 1.4em;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding: 0 24px 70px;
+    }
+
+    .soft-orb,
+    .soft-orb-2 {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(30px);
+      opacity: 0.25;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .soft-orb {
+      width: 280px;
+      height: 280px;
+      background: #d8ccb8;
+      top: 120px;
+      left: max(2vw, 8px);
+    }
+
+    .soft-orb-2 {
+      width: 240px;
+      height: 240px;
+      background: #e5ddd0;
+      right: 3vw;
+      top: 360px;
+    }
+
+    @media (max-width: 720px) {
+      .hero { padding-top: 72px; }
+      .article-wrap { border-radius: 24px; }
+      .article-intro { padding: 24px 22px 14px; }
+      article { padding: 10px 22px 28px; }
+      p { font-size: 1.05rem; }
+      .lead { font-size: 1.18rem; }
+      .spaced { font-size: 1.1rem; }
+      .question { padding: 22px 18px; }
+    }
+  </style>
+</head>
+<body class="grain">
+  <div class="soft-orb"></div>
+  <div class="soft-orb-2"></div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Shoonya Foundation</div>
+      <a class="nav-link" href="#article">Read article</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Shoonya Reflections</div>
+      <h1>Dishonesty on Both Sides</h1>
+      <p class="subtitle">A reflection on how confusion gets mistaken for success, how advice is often given from inner lack, and why truth demands a different kind of courage.</p>
+      <div class="hero-divider"></div>
+    </div>
+  </section>
+
+  <main class="shell">
+    <section class="article-wrap" id="article">
+      <div class="article-intro">
+        <p><strong>Theme:</strong> So much of human relationship rests on image. One person assumes the other has figured life out. The other quietly enjoys the role—while inwardly just as confused.</p>
+      </div>
+
+      <article>
+        <p class="lead">My husband’s cousin called today seeking career and life advice from him.</p>
+
+        <p>In the cousin’s eyes, my husband is someone who can guide him well. Perhaps because he lives in a big home, in a foreign country, has money, has two kids, and works at a reputed company. From the outside, these things easily become proof of success.</p>
+
+        <p>And yet the cousin himself is just starting his career with a degree from one of the most reputed colleges—much better than the one my husband went to. He has already done something many would call extraordinary. Still, he feels he must do more, make more money, and achieve much more.</p>
+
+        <p class="spaced">He thinks we are successful.<br>
+        We think he is successful.<br>
+        Each one looking at the other<br>
+        through the lens of image.</p>
+
+        <div class="question">
+          <p>And in that moment,<br><strong>dishonesty begins on both sides.</strong></p>
+        </div>
+
+        <p>Of course, my husband started guiding him. That is what we do. We step into the role of the one who knows. But the entire conversation could have been very different if honesty had entered.</p>
+
+        <blockquote>“Honestly, I don’t know what I am doing most days. Most days I feel I have nothing. Most days I feel I am not enough.”</blockquote>
+
+        <p>He could also have said, “I actually see you as successful because you went to a college I couldn’t go to.” But we rarely say such things. We protect the image. We continue the performance.</p>
+
+        <p>I started thinking—what if we could honestly tell people that we feel just as inferior, just as confused, just as unfinished as everyone else?</p>
+
+        <p>But it feels good to give advice we do not really have. For a moment, it gives us relief. It tells us maybe we must have done something right if people are asking us how to be successful. Inner inferiority suddenly feels a little less painful when someone comes to us for help.</p>
+
+        <p>I have done this too.</p>
+
+        <p>There were times I guided people on the lupus journey while not being able to heal myself, not even understanding myself fully. I could have honestly said:</p>
+
+        <blockquote>“I don’t know what I am doing. I am still trying to figure it all out. Some days I cannot sit with myself. Some days I feel horrible.”</blockquote>
+
+        <p>Many times, the reason to record a video was not clarity. It was simply the discomfort of doing nothing. Not doing anything felt like failure. So speaking, sharing, guiding—these became ways to escape the ache of not knowing.</p>
+
+        <p>And this is how the world misinterprets confusion for success. People see expression and assume certainty. They see confidence and assume peace. They hear advice and assume truth.</p>
+
+        <p class="spaced">One person pretends to know.<br>
+        Another pretends to believe.<br>
+        And slowly, both settle deeper<br>
+        into falsehood.</p>
+
+        <p>Most lies are not dramatic. They are subtle. Ordinary. Socially accepted. We lie without even knowing we are lying. We speak from borrowed certainty. We live from protected images.</p>
+
+        <h2>Why honesty feels so difficult</h2>
+
+        <p>Honesty requires courage. It requires breaking. It requires coming to your knees. To be honest is to risk losing the image that gives you psychological comfort. Why would anyone willingly do that?</p>
+
+        <div class="question">
+          <p>Because truth gives peace.<br><strong>And suffering grows in false lives.</strong></p>
+        </div>
+
+        <p>Suffering is not only in difficult situations. Much of suffering comes from the exhausting effort of maintaining what is not true. Pretending to be certain when you are confused. Pretending to be fulfilled when you feel empty. Pretending to guide when you yourself are wandering.</p>
+
+        <p>Truth takes away that burden. Truth softens the constant performance. Truth makes life quieter, simpler, more peaceful.</p>
+
+        <p class="closing">Perhaps the next time someone comes to us for advice, the real meeting can begin only when image drops. Maybe then the most honest response is not “I know,” but “I am also learning.” And in that honesty, something real finally becomes possible.</p>
+      </article>
+    </section>
+  </main>
+
+  <div class="footer-note">Shoonya Foundation · A space for self-inquiry, presence, and inner clarity</div>
+</body>
+</html>
