@@ -265,7 +265,7 @@
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">Shoonya Foundation</div>
-      <a class="nav-link" href="#article">Read article</a>
+      <a class="nav-link" href="articles.html">← Back to Articles</a>
     </div>
   </header>
 
@@ -273,7 +273,7 @@
     <div class="hero-inner">
       <div class="eyebrow">Shoonya Reflections</div>
       <h1>Dishonesty on Both Sides</h1>
-      <p class="subtitle">A reflection on how confusion gets mistaken for success, how advice is often given from inner lack, and why truth demands a different kind of courage.</p>
+      <p class="subtitle">When both sides quietly pretend—one to know, the other to believe—confusion turns into performance, and truth gets lost in the image of success.</p>
       <div class="hero-divider"></div>
     </div>
   </section>
