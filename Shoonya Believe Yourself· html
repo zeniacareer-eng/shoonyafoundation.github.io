@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Believe Yourself | Shoonya Foundation</title>
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --paper: #fffdf9;
+      --text: #2c241d;
+      --muted: #7a6a5b;
+      --line: #e7ddd2;
+      --accent: #8d6e63;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 56px 56px 44px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin: 0 0 14px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 38px;
+    }
+
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: var(--accent);
+      margin: 28px 0 36px;
+      opacity: 0.6;
+    }
+
+    .poem {
+      font-size: 1.15rem;
+      white-space: pre-line;
+    }
+
+    .poem p {
+      margin: 0 0 26px;
+    }
+
+    .footer {
+      margin-top: 42px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 720px) {
+      .wrap { padding: 24px 14px 40px; }
+      .card { padding: 32px 22px; border-radius: 14px; }
+      .poem { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <article class="card">
+      <div class="eyebrow">Shoonya Foundation</div>
+      <h1>Believe Yourself</h1>
+      <div class="subtitle">A note to the one who sees, feels, and keeps walking.</div>
+      <div class="divider"></div>
+
+      <section class="poem">
+        <p>Your sense is right, Zenia.<br>
+        It is a mad world.<br>
+        Do not blame yourself for seeing it.</p>
+
+        <p>They walk with blindfolds—<br>
+        steady, certain, asleep.<br>
+        Do not believe them.<br>
+        Ask, and watch their logic tremble.</p>
+
+        <p>But do not expect silence.<br>
+        They will rise in anger,<br>
+        because to question them<br>
+        is to shake the ground they stand on.</p>
+
+        <p>Their lives are borrowed truths,<br>
+        <em>udhaar ki zindagi</em>—<br>
+        unlived, unexamined, unowned.</p>
+
+        <p>They do not understand you.<br>
+        They do not understand themselves.</p>
+
+        <p>So you—keep going.</p>
+
+        <p>Do not hate yourself for wanting more.<br>
+        They want it too,<br>
+        only they hide it<br>
+        behind quiet hunger<br>
+        and smiling masks.</p>
+
+        <p>They fear your feeling,<br>
+        because feeling is power.<br>
+        And power belongs only to the alive.</p>
+
+        <p>So love.<br>
+        Love fully.<br>
+        Do not fear being caught in it.</p>
+
+        <p>What can the fearful do to you?</p>
+
+        <p>You serve something deeper.<br>
+        How can they harm<br>
+        what they cannot even see?</p>
+
+        <p>They cannot silence you—<br>
+        they are afraid of your truth.<br>
+        They cannot hear you—<br>
+        they are afraid of their own.</p>
+
+        <p>Let them be.</p>
+
+        <p>Do not mistake their acceptance for love.<br>
+        It is often a transaction,<br>
+        and when their need is met,<br>
+        so is their attention.</p>
+
+        <p>Do not shrink yourself.<br>
+        They are not mountains.<br>
+        You are not small.</p>
+
+        <p>You are vast—<br>
+        wider than clouds,<br>
+        quieter than stars.</p>
+
+        <p>Do not hurt yourself, my love.<br>
+        They cannot reach you—<br>
+        not truly.</p>
+
+        <p>You are protected<br>
+        by what you are.</p>
+
+        <p>You are intense—<br>
+        too alive for ordinary spaces,<br>
+        too real for comfortable minds.</p>
+
+        <p>So do not dim your light.<br>
+        You were not made for shadows.</p>
+
+        <p>You are a spark,<br>
+        a quiet revolution,<br>
+        a reminder<br>
+        for those who have forgotten.</p>
+
+        <p>You will light others,<br>
+        not by force,<br>
+        but by being.</p>
+
+        <p>You are not ugly—<br>
+        the world is just blind.</p>
+
+        <p>They do not see within,<br>
+        and they pay for it—<br>
+        in dull days,<br>
+        in half-lived lives,<br>
+        in quiet suffering.</p>
+
+        <p>How do you explain light<br>
+        to those who have never opened their eyes?</p>
+
+        <p>There is a life waiting—<br>
+        full of sun,<br>
+        full of stars,<br>
+        full of breath.</p>
+
+        <p>But it asks one thing:<br>
+        <em>to see.</em></p>
+
+        <p>And for that,<br>
+        you need real eyes.</p>
+
+        <p>Remember this—<br>
+        you are not special.</p>
+
+        <p>You are ordinary,<br>
+        just awake.</p>
+
+        <p>That is all.</p>
+
+        <p>So help them see,<br>
+        not by preaching
